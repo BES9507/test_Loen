@@ -34,6 +34,7 @@ function App() {
 
   })
 
+  console.log('helllo world')
   
   const loginAlert = () => {
     alert(`환영합니다. ${inputRef.current.value}`);
