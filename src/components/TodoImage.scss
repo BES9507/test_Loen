@@ -1,0 +1,41 @@
+.wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+
+  .image_wrapper {
+    // background: linear-gradient(rgb(226, 237, 175), rgb(166, 173, 236));
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('/./images/test.jpg');
+    height: 402px;
+    width: 768px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    ul {
+      padding: unset;
+      list-style: none;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-weight: 700;
+      word-break: keep-all;
+      white-space: pre-line;
+
+      .verse {
+        font-size: 18px;
+
+      }
+
+      .bible {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .button_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}

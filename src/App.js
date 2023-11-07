@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div>
-      {isOpen ? (
+      {!isOpen ? (
         <TodoImage></TodoImage>
       ) : (
         <TodoTemplate onClickPick={onClickEvent} />
