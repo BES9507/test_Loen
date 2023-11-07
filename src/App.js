@@ -21,44 +21,30 @@
 
 // export default App;
 
-import { useState, useRef } from "react";
-import "./App.css";
+import { useEffect, useRef } from "react";
+import './App.css';
 
 function App() {
-  const [render, setRender] = useState(false);
-  const countRef = useRef(0);
-  let countVar = 0;
+  const inputRef = useRef();
 
-  console.log("***** 렌더링 후 Ref:", countRef.current);
-  console.log("***** 렌더링 후 Var:", countVar);
+  useEffect(() => {
+    console.log(inputRef);
+    inputRef.current.focus();
+  },[])
 
-  const increaseRef = () => {
-    countRef.current = countRef.current + 1;
-    console.log("Ref Up! --->", countRef.current);
-  };
+  })
 
-  const increaseVar = () => {
-    countVar = countVar + 1;
-    console.log("Var Up! --->", countVar);
-  };
-
-  const doRender = () => {
-    setRender(!render);
-  };
-  return (
+  
+  const loginAlert = () => {
+    alert(`환영합니다. ${inputRef.current.value}`);
+    inputRef.current.focus();
+  }
+  return(
     <div className="App">
       <header className="App-header">
-        <p>Ref: {countRef.current}</p>
-        <p>Var: {countVar}</p>
-
-        <div>
-          <button onClick={increaseRef}>Ref Up!</button>
-          <button onClick={increaseVar}>Var Up!</button>
-          <button onClick={doRender}>Render !</button>
-        </div>
+        <input ref={inputRef} type="text" placeholder="id"/>
+        <button onClick={loginAlert}>Login</button>
       </header>
     </div>
-  );
+  )
 }
-
-export default App;
